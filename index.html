@@ -5,42 +5,153 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HTML MediaPanel</title>
-    <base href="https://ulithg18.github.io/crudscope-html-mediapanel/">
+    <!-- <base href="https://www.google.com"> -->
+
+    <base href="">
+    <style>
+        table,
+        th,
+        td {
+            border: 1px solid black;
+            padding: 3px;
+        }
+    </style>
 </head>
 
 <body>
     <header>
-        <h1>Media Panel</h1>
+        <h1>Media Panel <abbr title="Create, Read, Update, Delete">CRUD</abbr></h1>
     </header>
 
     <nav>
         <ul>
-            <li><a href="todolist"></a>To Do List</li>
-            <li><a href="create"></a>Create Task</li>
-            <li><a href="multimedia"></a>Multimedia</li>
-            <li><a href="about"></a>About it</li>
+            <li><a href="#todolist">To Do List</a></li>
+            <li><a href="#create">Create Task</a></li>
+            <li><a href="#multimedias">Multimedia</a></li>
+            <li><a href="#about">About it</a></li>
         </ul>
-    </nav>
+    </nav><br><br><br><br><br>
 
     <main>
         <section id="todolist">
             <h2>To Do List</h2>
+            <table style="width: 600px; text-align: center">
+                <tr>
+                    <th>Task</th>
+                    <th>Date</th>
+                    <th>Priority</th>
+                    <th>Notes</th>
+                    <th>Actions</th>
+                </tr>
+                <tr>
+                    <td>Finish the Moodle things</td>
+                    <td>Friday</td>
+                    <td>5</td>
+                    <td>If I don't do it "pailas"</td>
+                    <td><button>Update</button><button>Delete</button></td>
+                </tr>
+                <tr>
+                    <td>Record audio for English class</td>
+                    <td>Monday</td>
+                    <td>3</td>
+                    <td></td>
+                    <td><button>Update</button><button>Delete</button></td>
+                </tr>
+                <tr>
+                    <td>Write README documentation</td>
+                    <td>Thursday</td>
+                    <td>4</td>
+                    <td>This is for the "prueba de desempeño"</td>
+                    <td><button>Update</button><button>Delete</button></td>
+                </tr>
+                <tr>
+                    <td>Update GitHub repository</td>
+                    <td>Sunday</td>
+                    <td>5</td>
+                    <td>Push before midnight</td>
+                    <td><button>Update</button><button>Delete</button></td>
+                </tr>
+            </table>
+        </section><br><br><br><br><br>
 
-        </section>
+        <article>
+            <h3>Finish the Moodle things</h3>
+            <p>If I don't do it "pailas"</p>
+            <p>Priority: <strong>High - 4</strong></p>
+            <p>Due <time datetime="2025-12-12">December 12, 2025</time></p>
+        </article><br><br><br><br><br>
+
         <section id="create">
             <h2>Create Task</h2>
+            <strong>
+                <p>Priority level <span style="color:red">1 to 5</span>: 1 for lowest and 5 for highest</p>
+            </strong>
+            <form>
 
-        </section>
-        <section id="multimedia">
+                <label for="task">Task</label>
+                <input id="task" type="text" placeholder="New task" required><br><br>
+
+                <label for="date">Date</label>
+                <input id="date" type="date" placeholder="Date to be complete" required><br><br>
+
+                <label for="priority">Priority</label>
+                <input id="priority" type="number" min="1" max="5" placeholder="Num" style="width: 50px;"
+                    required><br><br>
+
+                <label for="notes">Notes</label>
+                <textarea name="notes" id="notes"></textarea><br><br>
+
+                <input type="submit" value="Save">
+
+            </form>
+
+        </section><br><br><br><br><br>
+
+        <div id="multimedias">
             <h2>Multimedia</h2>
 
-        </section>
-        <section id="about">
-            <h2>About it</h2>
+            <audio controls>
+                <source src="/multimedia/In_The_End_Linkin Park.mp3" alt="In The End - Linkin Park">
+            </audio>
+            <video width="300px" height="170px" controls>
+                <source src="/multimedia/avatar.mp4" alt="Avatar video">
+            </video>
 
-        </section>
+        </div><br><br><br><br><br>
+
     </main>
 
+    <aside id="about">
+        <h2>About it</h2>
+        <h3>Some Tips</h3>
+        <ol>
+            <li>
+                <p><mark><strong><u>Simple is better:</u></strong></mark> Short names help you organize faster<br><br>
+                </p>
+            </li>
+            <li>
+                <p><mark><strong><u>Priority:</u></strong></mark> Use the priority thing wisely<br><br></p>
+            </li>
+            <li>
+                <p><mark><strong><u>Add notes:</u></strong></mark> This help you with specific instructions<br><br></p>
+            </li>
+            <li>
+                <p><mark><strong><u>Update the list:</u></strong></mark> A clean task list means a clean mind</p>
+            </li>
+        </ol>
+        <img src="/multimedia/windog.png" alt="dog image from windows 7" width="350px">
+
+    </aside><br><br><br><br><br>
+
+    <footer>
+        Credits <br>
+        Ulith Giraldo Echavarría <br>
+        <time datetime="9-12-2025">9 de diciembre de 2025</time> <br>
+        <strong>GitHub:</strong> <em>https://github.com/UlithG18</em><br>
+        <address>
+            <strong>Email:</strong> rose.lilith18@gmail.com
+        </address>
+    </footer>
 </body>
 
 </html>
